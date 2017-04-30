@@ -1,0 +1,6 @@
+flask
+tweepy==3.2.0
+simplejson
+numpy
+python-firebase
+gunicorn

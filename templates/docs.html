@@ -1,0 +1,98 @@
+{% extends "base.html" %} {% block head %}
+<link rel="stylesheet" href="/static/css/docs.css" /> {% endblock %} {% block content %}
+<h2>Introduction</h2>
+<p class="justify">Sentiment Analysis is the computational treatment of opinion, mood, feeling and subjectivity in words and phrases from
+    collected text. </p>
+<p class="justify">The graphs explore the relationship between sentiment in Tweets, determined by numerical representations, and S&amp;P 500
+    Index Volatility changes. Sentiment is determined here by a count of the number of positive and negative trading-related
+    words by minute, positive minus negative, and average sentiment is this value divided by the number of relevant Tweets.</p>
+<p class="justify">Machine learning was used to investigate the relationship further, resulting in the predictions in the Dashboard.</p>
+
+<div class="card">
+    <div class="graph_header">
+        <h2 id="graph_title">SPX Volatility and Tweet Sentiment by Day</h2>
+    </div>
+    <div class="actions">
+        <div>
+            <h3>Parameter:</h3>
+            <select id="type_picker">
+                    <option value="sum">Tweet Sentiment</option>
+                    <option value="ave">Average Sentiment per Tweet</option>
+                    <option value="num">Volume of Tweets</option>
+                </select>
+        </div>
+        <div class="right">
+            <h3>Choose a date:</h3>
+            <select id="date_picker">
+                    <option value="2017-02-27">27/02/2017</option>
+                    <option value="2017-02-28">28/02/2017</option>
+                    <option value="2017-03-01">01/03/2017</option>
+                    <option value="2017-03-02">02/03/2017</option>
+                    <option value="2017-03-03">03/03/2017</option>
+                    <option value="2017-03-06">06/03/2017</option>
+                    <option value="2017-03-07">07/03/2017</option>
+                    <option value="2017-03-08">08/03/2017</option>
+                    <option value="2017-03-09">09/03/2017</option>
+                    <option value="2017-03-10">10/03/2017</option>
+                    <option value="2017-03-13">13/03/2017</option>
+                    <option value="2017-03-14">14/03/2017</option>
+                    <option value="2017-03-15">15/03/2017</option>
+                    <option value="2017-03-16">16/03/2017</option>
+                    <option value="2017-03-17">17/03/2017</option>
+                    <option value="2017-03-20">20/03/2017</option>
+                    <option value="2017-03-21">21/03/2017</option>
+                    <option value="2017-03-22">22/03/2017</option>
+                    <option value="2017-03-23">23/03/2017</option>
+                    <option value="2017-03-24">24/03/2017</option>
+                    <option value="2017-03-27">27/03/2017</option>
+                    <option value="2017-03-28">28/03/2017</option>
+                    <option value="2017-03-29">29/03/2017</option>
+                </select>
+        </div>
+    </div>
+    <div id="graph" class="graph"></div>
+</div>
+<p class="justify">The chart below is a financial technical indicator that represents historic value changes for each minute of volatility of
+    the S&amp;P 500 Index for a selected day (in black) mapped with predicted values. Both predictive models - Linear Regression
+    and Regression Tree - are based on the Twitter sentiment rate for the corresponding minutes. </p>
+
+<div class="card">
+    <div class="graph_header">
+        <h2 id="graph_title">SPX Volatility and Predicted Volatility</h2>
+    </div>
+    <div class="actions">
+        <div></div>
+        <div class="right">
+            <h3>Choose a date:</h3>
+            <select id="date_picker2">
+                    <option value="2017-02-27">27/02/2017</option>
+                    <option value="2017-02-28">28/02/2017</option>
+                    <option value="2017-03-01">01/03/2017</option>
+                    <option value="2017-03-02">02/03/2017</option>
+                    <option value="2017-03-03">03/03/2017</option>
+                    <option value="2017-03-06">06/03/2017</option>
+                    <option value="2017-03-07">07/03/2017</option>
+                    <option value="2017-03-08">08/03/2017</option>
+                    <option value="2017-03-09">09/03/2017</option>
+                    <option value="2017-03-10">10/03/2017</option>
+                    <option value="2017-03-13">13/03/2017</option>
+                    <option value="2017-03-14">14/03/2017</option>
+                    <option value="2017-03-15">15/03/2017</option>
+                    <option value="2017-03-16">16/03/2017</option>
+                    <option value="2017-03-17">17/03/2017</option>
+                    <option value="2017-03-20">20/03/2017</option>
+                    <option value="2017-03-21">21/03/2017</option>
+                    <option value="2017-03-22">22/03/2017</option>
+                    <option value="2017-03-23">23/03/2017</option>
+                    <option value="2017-03-24">24/03/2017</option>
+                    <option value="2017-03-27">27/03/2017</option>
+                    <option value="2017-03-28">28/03/2017</option>
+                    <option value="2017-03-29">29/03/2017</option>
+                </select>
+        </div>
+    </div>
+    <div id="graph2" class="graph"></div>
+</div>
+{% endblock %} {% block scripts %}
+<script src="/static/js/docs.js"></script>
+{% endblock %}

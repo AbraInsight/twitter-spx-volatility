@@ -1,0 +1,7 @@
+.content .center, .copyright {
+    max-width: 900px
+}
+
+.justify {
+    text-align: justify;
+}

@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/static/css/dashboard.css" />
+{% endblock %}
+
+{% block content %}
+    <div class="dash">
+        <div class="main">
+            <div class="card">
+                <div class="graph_header">
+                    <h2>Predicted SPX Volatility</h2>
+                    <div class="right">
+                        <h3>Choose the time period:</h3>
+                        <select id="period_picker">
+                            <option value="30">30 mins</option>
+                            <option value="60">1 hour</option>
+                            <option value="180">3 hours</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="main" class="graph"></div>
+            </div>
+
+            <div class="widgets">
+                <p class="grow left">Regression Tree Prediction</p>
+                <p class="box" id="dt_box">--</p>
+                <p class="box" id="rm_box">--</p>
+                <p class="grow">Linear Regression Prediction</p>
+            </div>
+
+        </div>
+        <div class="minis">
+
+            <div class="card">
+                <div class="graph_header">
+                    <h2>Tweet Sentiment</h2>
+                </div>
+                <div id="sum" class="graph short"></div>
+            </div>
+
+            <div class="card">
+                <div class="graph_header">
+                    <h2>Volume Of Tweets</h2>
+                </div>
+                <div id="num" class="graph short"></div>
+            </div>
+
+            <div class="card no-margin">
+                <div class="graph_header">
+                    <h2>Average Sentiment Per Tweet</h2>
+                </div>
+                <div id="ave" class="graph short"></div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+<script src="/static/js/dashboard.js"></script>
+{% endblock %}
