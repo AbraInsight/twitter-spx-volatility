@@ -4,3 +4,4 @@ simplejson
 numpy
 python-firebase
 gunicorn
+supervisor
