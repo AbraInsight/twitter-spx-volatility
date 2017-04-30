@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "This is working..."
 cd /home/ruth_heather_jones/twitter-spx-volatility
 pip install -r ./requirements.txt
 

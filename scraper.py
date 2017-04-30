@@ -111,7 +111,7 @@ def processing(pro):
     prediction_daphne = rtmodel({'Ave': Ave, 'Neg': Neg, 'Num': Num, 'Pos': Pos, 'Sum': Sum})
     prediction_natalie = nrmodel(Num)
 
-    log.apend(Num)
+    log.append(Num)
     if len(log) > 10:
         log.pop(0)
         isDead()
