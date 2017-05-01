@@ -12,4 +12,4 @@ def docs():
     return render_template('docs.html', page={'title': 'Documentation'})
 
 # app.config['TEMPLATES_AUTO_RELOAD'] = True
-app.run()
+# app.run()
